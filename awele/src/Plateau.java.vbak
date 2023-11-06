@@ -1,0 +1,38 @@
+package awele;
+
+import java.util.Arrays;
+
+public class Plateau {
+   public int[][] trou;
+    private int nbrGraines;
+
+    public Plateau() {
+    	trou = new int[2][6];
+    	nbrGraines = 48;
+        rempliPlateau();
+    }
+
+    public Plateau(int[][] Plateau) {
+        this();
+        for (int i = 0; i < trou.length; i++) {
+            for (int j = 0; j < trou[0].length; j++) {
+            	trou[i][j] = Plateau[i][j];
+            }
+        }
+    }
+
+    // Remplir le plateau de graines
+    private void rempliPlateau() {
+        Arrays.fill(trou[0], 4);
+        Arrays.fill(trou[1], 4);
+    }
+
+
+	/*
+	 * public static void afficheplateau(int i, int j) { // TODO Auto-generated
+	 * method stub
+	 * 
+	 * }
+	 */
+
+}
